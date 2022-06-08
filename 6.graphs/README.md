@@ -208,14 +208,16 @@ PASS</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8
         <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">node</span>] = <span style="color:#66d9ef">true</span>
         <span style="color:#a6e22e">near</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">edges</span>[<span style="color:#f92672">*</span><span style="color:#a6e22e">node</span>]
 
-        <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">near</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; len(<span style="color:#a6e22e">near</span>); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
             <span style="color:#a6e22e">j</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">near</span>[<span style="color:#a6e22e">i</span>]
             <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">j</span>] {
                 <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">Enqueue</span>(<span style="color:#f92672">*</span><span style="color:#a6e22e">j</span>)
-                <span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">j</span>] = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">visited</span>[<span style="color:#a6e22e">j</span>] = <span style="color:#66d9ef">true</span>
             }
         }
-        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">f</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+<span style="color:#66d9ef">if</span> 
+        
+<span style="color:#a6e22e">f</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
             <span style="color:#a6e22e">f</span>(<span style="color:#a6e22e">node</span>)
         }
     }
