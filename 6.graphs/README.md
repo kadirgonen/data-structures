@@ -1,4 +1,4 @@
-##GRAPH
+GRAPH
 
 <p>A <strong>graph</strong> is a representation of a network structure. There are tons of graph real world examples, the Internet and the social graph being the classic ones.</p>
 
