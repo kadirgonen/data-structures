@@ -34,8 +34,6 @@
 <span style="color:#f92672">import</span> (
     <span style="color:#e6db74">&#34;fmt&#34;</span>
     <span style="color:#e6db74">&#34;sync&#34;</span>
-
-    <span style="color:#e6db74">&#34;github.com/cheekybits/genny/generic&#34;</span>
 )
 
 <span style="color:#75715e">// Item the type of the binary search tree
@@ -122,12 +120,6 @@ PASS</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8
     <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddNode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nE</span>)
     <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddNode</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nF</span>)
 
-    <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddEdge</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nA</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nB</span>)
-    <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddEdge</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nA</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nC</span>)
-    <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddEdge</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nB</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nE</span>)
-    <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddEdge</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nC</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nE</span>)
-    <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddEdge</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nE</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nF</span>)
-    <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">AddEdge</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nD</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">nA</span>)
 }
 
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestAdd</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
