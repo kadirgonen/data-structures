@@ -1,6 +1,16 @@
 <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
 Golang Datastructures: Trees
-
+</h1>
+<div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
+<div class="flex flex-row flex-wrap items-center">
+</div>
+</div>
+</header>
+<section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+<div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
+<div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
+<details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
+<summary class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700">
 Table of Contents
 </summary>
 <div class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600">
