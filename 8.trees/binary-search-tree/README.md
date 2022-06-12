@@ -447,7 +447,7 @@ up that memory.</li>
                 <span class="nx">node</span><span class="p">.</span><span class="nx">children</span> <span class="p">=</span> <span class="kc">nil</span>
         <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
-<p>A <code>*Node</code> would have a <code>remove</code> function, which does the two-step process of
+<p>A <code>Node</code> would have a <code>remove</code> function, which does the two-step process of
 the <code>Node</code>&rsquo;s removal.</p>
 <p>In the first step, we take the node out of the <code>parent</code>&rsquo;s children list, by
 looping over them and removing the node by appending the elements before the
