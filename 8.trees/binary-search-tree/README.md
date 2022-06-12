@@ -1,17 +1,6 @@
 <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
 Golang Datastructures: Trees
-</h1>
-<div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400">
-<div class="flex flex-row flex-wrap items-center">
-<time datetime="2019-02-13 00:00:00 &#43;0000 UTC">13 February 2019</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">14 mins</span>
-</div>
-</div>
-</header>
-<section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
-<div class="order-first px-0 lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8 lg:order-last">
-<div class="ltr:pl-5 rtl:pr-5 toc lg:sticky lg:top-10">
-<details open class="mt-0 overflow-hidden rounded-lg rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 lg:mt-3">
-<summary class="block py-1 text-lg font-semibold cursor-pointer rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 text-neutral-800 dark:text-neutral-100 lg:hidden bg-neutral-100 dark:bg-neutral-700">
+
 Table of Contents
 </summary>
 <div class="py-2 border-dotted ltr:border-l rtl:border-r rtl:pr-5 ltr:pl-5 ltr:-ml-5 rtl:-mr-5 border-neutral-300 dark:border-neutral-600">
@@ -137,12 +126,12 @@ create the HTML document we saw above as a tree of <code>Node</code>s by hand:</
                 <span class="nx">id</span><span class="p">:</span>   <span class="s">&#34;foo&#34;</span><span class="p">,</span>
         <span class="p">}</span>
 
-        <span class="nx">h1</span> <span class="o">:=</span> <span class="nx">Node</span><span class="p">{</span>
+<span class="nx">h1</span> <span class="o">:=</span> <span class="nx">Node</span><span class="p">{</span>
                 <span class="nx">tag</span><span class="p">:</span>  <span class="s">&#34;h1&#34;</span><span class="p">,</span>
                 <span class="nx">text</span><span class="p">:</span> <span class="s">&#34;Hello, World!&#34;</span><span class="p">,</span>
         <span class="p">}</span>
 
-        <span class="nx">html</span> <span class="o">:=</span> <span class="nx">Node</span><span class="p">{</span>
+<span class="nx">html</span> <span class="o">:=</span> <span class="nx">Node</span><span class="p">{</span>
                 <span class="nx">tag</span><span class="p">:</span>      <span class="s">&#34;html&#34;</span><span class="p">,</span>
                 <span class="nx">children</span><span class="p">:</span> <span class="p">[]</span><span class="o">*</span><span class="nx">Node</span><span class="p">{</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">h1</span><span class="p">},</span>
         <span class="p">}</span>
@@ -313,7 +302,7 @@ implementation of the algorithm:</p>
                 <span class="k">return</span> <span class="nx">node</span>
         <span class="p">}</span>
 
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">children</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">children</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
                 <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">child</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">node</span><span class="p">.</span><span class="nx">children</span> <span class="p">{</span>
                         <span class="nf">findByIdDFS</span><span class="p">(</span><span class="nx">child</span><span class="p">,</span> <span class="nx">id</span><span class="p">)</span>
                 <span class="p">}</span>
@@ -371,7 +360,7 @@ interested in. Let&rsquo;s write a couple of tests that will test this function:
                 <span class="p">},</span>
         <span class="p">}</span>
 
-        <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="k">case</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">cases</span> <span class="p">{</span>
+<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="k">case</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">cases</span> <span class="p">{</span>
                 <span class="nx">result</span> <span class="o">:=</span> <span class="k">case</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nf">hasClass</span><span class="p">(</span><span class="nx">test</span><span class="p">.</span><span class="nx">className</span><span class="p">)</span>
                 <span class="k">if</span> <span class="nx">result</span> <span class="o">!=</span> <span class="k">case</span><span class="p">.</span><span class="nx">expectedResult</span> <span class="p">{</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nf">Error</span><span class="p">(</span>
