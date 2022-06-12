@@ -39,7 +39,6 @@ Table of Contents
 or just by simply avoiding them if you don’t understand them (which is what I
 had been doing for a while).</p>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/tree_swing.png" caption="" alt="Person sitting on a swing on a tree">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <p>Now, don&rsquo;t get me wrong - arrays, lists, stacks and queues are quite powerful
@@ -65,7 +64,6 @@ additional nodes that form a hierarchy.</p>
 <p>What the definition states are that a tree is just a combination of nodes (or
 vertices) and edges (or links between the nodes) without having a cycle.</p>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/invalid-tree.png" caption="" alt="Graph data structure graphic">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <p>For example, the data structure represented on the diagram is a combination of
@@ -75,7 +73,6 @@ this structure is not a tree.</p>
 <p>If we would break the edge between nodes F and E and add a new node called G
 with an edge between F and G, we would end up with something like this:</p>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/valid-tree.png" caption="" alt="Tree data structure graphic">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <p>Now, since we eliminated the cycle in this graph, we can say that we have a
@@ -91,7 +88,6 @@ follow two edges to get to A.</p>
 <p>Now that we know a bit of theory about trees, let’s see how we can solve some
 problems.</p>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/web_development.png" caption="" alt="Web developer">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <h2 id="modelling-an-html-document" class="relative group">Modelling an HTML document <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#modelling-an-html-document" aria-label="Anchor">#</a></span></h2>
@@ -115,7 +111,6 @@ easier, let’s see a tiny HTML document:</p>
 <p>So, if we would model this document as a tree, it would look something like
 this:</p>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/html-document-tree.png" caption="" alt="DOM node tree">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <p>Now, we could treat the text nodes as separate <code>Node</code>s, but we can make our
@@ -227,7 +222,6 @@ using the <code>Node</code> struct as a building block:</p>
 most deeply nested structs and working up towards <code>body</code> and <code>html</code>. Let&rsquo;s look
 at a graphic of our tree:</p>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/mydom-tree.png" caption="" alt="DOM node tree">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <h2 id="implementing-node-lookup-" class="relative group">Implementing Node Lookup 🔎 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#implementing-node-lookup-" aria-label="Anchor">#</a></span></h2>
@@ -240,7 +234,6 @@ Search (BFS) and Depth First Search (DFS).</p>
 <p>BFS, as its name suggests, takes an approach to traversal where it explores
 nodes in &ldquo;width&rdquo; first before it goes in &ldquo;depth&rdquo;. Here&rsquo;s a visualisation of the
 steps a BFS algorithm would take to traverse the whole tree:</p>
-<p><img src="/golang-datastructures-trees/mydom-tree-bfs-steps.png" alt="" />
 </p>
 <p>As you can see, the algorithm will take two steps in depth (over <code>html</code> and
 <code>body</code>), but then it will visit all of the <code>body</code>&rsquo;s children nodes before it
@@ -292,7 +285,6 @@ found at the end we return <code>nil</code> instead of a pointer to a <code>Node
 as many nodes as possible until it reaches a leaf. When then happens, it will
 backtrack and find another branch on the tree to drill down on.</p>
 <p>Let&rsquo;s see what that means visually:</p>
-<p><img src="/golang-datastructures-trees/mydom-tree-dfs-steps.png" alt="" />
 </p>
 <p>If this is confusing to you, worry not - I&rsquo;ve added a bit more granularity in
 the steps to aid my explanation.</p>
@@ -320,7 +312,6 @@ implementation of the algorithm:</p>
         <span class="k">return</span> <span class="kc">nil</span>
 <span class="p">}</span></code></pre></div>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/people_search.png" caption="" alt="People search graphic">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <h2 id="finding-by-class-name-" class="relative group">Finding by class name 🔎 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#finding-by-class-name-" aria-label="Anchor">#</a></span></h2>
@@ -415,7 +406,6 @@ Breadth-first approach here - the algorithm uses a queue for each of the
 <code>Node</code>s and loops over them while appending to the <code>result</code> slice if a match is
 found.</p>
 <figure class="imagecaption">
-<img class="caption" src="/golang-datastructures-trees/cancel.png" caption="" alt="Delete graphic">
 <span class="caption-text" style="font-size: 0.75em;display: table;margin: 0 auto 1.5em;"></span>
 </figure>
 <h2 id="deleting-nodes-" class="relative group">Deleting nodes 🗑 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#deleting-nodes-" aria-label="Anchor">#</a></span></h2>
