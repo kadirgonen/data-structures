@@ -466,4 +466,3 @@ node in the list, and the elements after the node.</p>
 <p>In the second step, after checking for the presence of any children on the
 node, we remove the reference to the <code>parent</code> from all the children and then we
 set the <code>Node</code>&rsquo;s children to <code>nil</code>.</p>
-<h2 id="where-to-next" class="relative group">Where to next? <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#where-to-next" aria-label="Anchor">#</a></span></h2>
